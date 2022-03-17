@@ -7,7 +7,7 @@ const Home = () => {
           <div className="content">
             <div className="details">
               <div className="hello">
-                <h3 className="orangeText">Hello, I'm</h3>
+                <h3 className="orangeText">{`Hello, I'm`}</h3>
               </div>
               <div className="name">
                 <h3>James Smith</h3>
@@ -20,8 +20,8 @@ const Home = () => {
               </div>
               <div className="text">
                 <p>
-                  I'm creative designer based in New York, and I'm very
-                  passionate and dedicated to my work.
+                  {`I'm creative designer based in New York, and I'm very
+                  passionate and dedicated to my work.`}
                 </p>
               </div>
               <div className="button">
