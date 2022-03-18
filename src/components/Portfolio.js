@@ -72,7 +72,7 @@ const Portfolio = () => {
               {data &&
                 data.categorys &&
                 data.categorys.map((data, i) => (
-                  <li>
+                  <li key={i}>
                     <a
                       className={`c-pointer ${activeBtn(data.filterOption)}`}
                       onClick={handleFilterKeyChange(data.filterOption)}
@@ -89,7 +89,7 @@ const Portfolio = () => {
               {data &&
                 data.contentElement &&
                 data.contentElement.map((data, i) => (
-                  <li className={`${data.categoryName} grid-item`}>
+                  <li className={`${data.categoryName} grid-item`} key={i}>
                     <div className="inner">
                       <div
                         className="entry dizme_tm_portfolio_animation_wrap"

@@ -39,6 +39,7 @@ const Skills = ({ dark }) => {
                       className="progress_inner skillsInner___"
                       data-value={skill.value}
                       data-color={skill.color}
+                      key={i}
                     >
                       <span>
                         <span className="label">{skill.name}</span>

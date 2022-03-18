@@ -22,7 +22,7 @@ const Testimonial = () => {
       clickable: true,
     },
   };
-  console.log(data);
+
   return (
     <div className="dizme_tm_section">
       <div className="dizme_tm_testimonials">

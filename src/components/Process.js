@@ -14,7 +14,7 @@ const Process = ({ dark }) => {
             <ul>
               {data &&
                 data.map((data, i) => (
-                  <li className="wow fadeInUp" data-wow-duration="1s">
+                  <li className="wow fadeInUp" data-wow-duration="1s" key={i}>
                     <div className="list_inner">
                       <div className="icon">
                         <span>
