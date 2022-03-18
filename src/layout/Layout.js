@@ -3,6 +3,7 @@ import CopyRight from "../components/CopyRight";
 import ImageView from "../components/popup/ImageView";
 import VideoPopup from "../components/popup/VideoPopup";
 import {
+  aTagClick,
   dataImage,
   fatchData,
   scrollTop,
@@ -24,6 +25,7 @@ const Layout = ({ children, dark }) => {
   useEffect(() => {
     dataImage();
     wowJsAnimation();
+    aTagClick();
     window.addEventListener("scroll", scroll_);
     window.addEventListener("scroll", stickyNav);
     window.addEventListener("scroll", scrollTop);

@@ -8,7 +8,6 @@ const News = () => {
   useEffect(async () => {
     setData(await fatchData("/static/blog.json"));
   }, []);
-  console.log(popupData);
   return (
     <div className="dizme_tm_section" id="blog">
       <BlogPopUp open={popup} data={popupData} close={() => setPopup(false)} />

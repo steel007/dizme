@@ -92,6 +92,7 @@ export const aTagClick = () => {
   for (let i = 0; i < aTag.length; i++) {
     const a = aTag[i];
     a.addEventListener("click", (e) => {
+      console.log("hello");
       e.preventDefault();
     });
   }

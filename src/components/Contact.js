@@ -1,4 +1,10 @@
+import { useEffect, useState } from "react";
+import { fatchData } from "../utilits";
 const Contact = () => {
+  const [data, setData] = useState({});
+  useEffect(async () => {
+    setData(await fatchData("/static/info.json"));
+  }, []);
   return (
     <div className="dizme_tm_section" id="contact">
       <div className="dizme_tm_contact">
@@ -13,43 +19,45 @@ const Contact = () => {
           </div>
           <div className="contact_inner">
             <div className="left wow fadeInLeft" data-wow-duration="1s">
-              <ul>
-                <li>
-                  <div className="list_inner">
-                    <div className="icon orangeBackground">
-                      <i className="icon-location orangeText" />
+              {data && data.contact && (
+                <ul>
+                  <li>
+                    <div className="list_inner">
+                      <div className="icon orangeBackground">
+                        <i className="icon-location orangeText" />
+                      </div>
+                      <div className="short">
+                        <h3>Address</h3>
+                        <span>{data.contact.address}</span>
+                      </div>
                     </div>
-                    <div className="short">
-                      <h3>Address</h3>
-                      <span>20, Somewhere in world</span>
+                  </li>
+                  <li>
+                    <div className="list_inner">
+                      <div className="icon greenBackground">
+                        <i className="icon-mail-1 greenText" />
+                      </div>
+                      <div className="short">
+                        <h3>Email</h3>
+                        <span>
+                          <a href="#">{data.contact.email}</a>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="list_inner">
-                    <div className="icon greenBackground">
-                      <i className="icon-mail-1 greenText" />
+                  </li>
+                  <li>
+                    <div className="list_inner">
+                      <div className="icon purpleBackground">
+                        <i className="icon-phone purpleText" />
+                      </div>
+                      <div className="short">
+                        <h3>Phone</h3>
+                        <span>{data.contact.phn}</span>
+                      </div>
                     </div>
-                    <div className="short">
-                      <h3>Email</h3>
-                      <span>
-                        <a href="#">hello@dizme.com</a>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="list_inner">
-                    <div className="icon purpleBackground">
-                      <i className="icon-phone purpleText" />
-                    </div>
-                    <div className="short">
-                      <h3>Phone</h3>
-                      <span>+123 456 7890</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              )}
             </div>
             <div className="right wow fadeInRight" data-wow-duration="1s">
               <div className="fields">

@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import { useEffect } from "react";
 import About from "../src/components/About";
 import Contact from "../src/components/Contact";
@@ -22,6 +23,9 @@ const Index = () => {
 
   return (
     <Layout dark>
+      <Head>
+        <title>Dizme | Home</title>
+      </Head>
       <Home dark />
       {/* HERO */}
       {/* PROCESS */}

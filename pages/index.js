@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import About from "../src/components/About";
 import Contact from "../src/components/Contact";
 import Home from "../src/components/Home";
@@ -17,6 +18,9 @@ const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
 const Index = () => {
   return (
     <Layout>
+      <Head>
+        <title>Dizme | Home</title>
+      </Head>
       <Home />
       {/* HERO */}
       {/* PROCESS */}
