@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { activeSkillProgress, fatchData } from "../utilits";
 
-const Skills = () => {
+const Skills = ({ dark }) => {
   const [data, setData] = useState({});
   useEffect(async () => {
     setData(await fatchData("/static/info.json"));
@@ -54,7 +54,7 @@ const Skills = () => {
               </div>
             </div>
             <div className="right">
-              <img src="img/skills/1.jpg" alt="" />
+              <img src={`img/skills/${dark ? 2 : 1}.jpg`} alt="" />
             </div>
           </div>
         </div>

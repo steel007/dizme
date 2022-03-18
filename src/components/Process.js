@@ -1,7 +1,7 @@
 import parse from "html-react-parser";
 import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
-const Process = () => {
+const Process = ({ dark }) => {
   const [data, setData] = useState([]);
   useEffect(async () => {
     setData(await fatchData("/static/workProcess.json"));
@@ -20,10 +20,12 @@ const Process = () => {
                         <span>
                           <img
                             className="brush"
-                            src={`img/brushes/process/${i + 1}.png`}
+                            src={`img/brushes/process${dark ? "/dark" : ""}/${
+                              i + 1
+                            }.png`}
                             alt=""
                           />
-                          {parse(data.icons["light"])}
+                          {parse(data.icons[dark ? "dark" : "light"])}
                         </span>
                       </div>
                       <div className="title">

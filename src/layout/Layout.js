@@ -16,7 +16,7 @@ import MobileMenu from "./MobileMenu";
 import PreLoader from "./PreLoader";
 import Progressbar from "./Progressbar";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, dark }) => {
   const [siteInfo, setSiteInfo] = useState({});
   useEffect(async () => {
     setSiteInfo(await fatchData("/static/siteSetting.json"));
@@ -35,9 +35,15 @@ const Layout = ({ children }) => {
       <VideoPopup />
       <div className="dizme_tm_all_wrap" data-magic-cursor="show">
         <MobileMenu
-          logo={siteInfo && siteInfo.logo && siteInfo.logo["light"]}
+          logo={
+            siteInfo && siteInfo.logo && siteInfo.logo[dark ? "dark" : "light"]
+          }
         />
-        <Header logo={siteInfo && siteInfo.logo && siteInfo.logo["light"]} />
+        <Header
+          logo={
+            siteInfo && siteInfo.logo && siteInfo.logo[dark ? "dark" : "light"]
+          }
+        />
         {children}
         <CopyRight brandName={siteInfo && siteInfo.brandName} />
         <Cursor />

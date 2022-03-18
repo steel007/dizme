@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
-const Partners = () => {
+const Partners = ({ dark }) => {
   const [data, setData] = useState([]);
   useEffect(async () => {
     setData(await fatchData("/static/partners.json"));
@@ -15,7 +15,10 @@ const Partners = () => {
                 data.map((img, i) => (
                   <li className="wow fadeIn" data-wow-duration="1s" key={i}>
                     <div className="list_inner">
-                      <img src={img.logo && img.logo["light"]} alt="" />
+                      <img
+                        src={img.logo && img.logo[dark ? "dark" : "light"]}
+                        alt=""
+                      />
                       <a className="dizme_tm_full_link" a="" href={img.link} />
                     </div>
                   </li>

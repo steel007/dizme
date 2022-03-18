@@ -2,7 +2,7 @@ import parse from "html-react-parser";
 import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 
-const Home = () => {
+const Home = ({ dark }) => {
   const [data, setData] = useState({});
   useEffect(async () => {
     setData(await fatchData("/static/info.json"));
@@ -11,7 +11,11 @@ const Home = () => {
   return (
     <div className="dizme_tm_section" id="home">
       <div className="dizme_tm_hero">
-        <div className="background" data-img-url="img/slider/1.jpg" />
+        <div
+          className="background"
+          data-img-url={`img/slider/${dark ? 2 : 1}.jpg`}
+          style={{ backgroundImage: `img/slider/${dark ? 2 : 1}.jpg` }}
+        />
         <div className="container">
           <div className="content">
             <div className="details">
@@ -91,12 +95,20 @@ const Home = () => {
               <path
                 id="wheel"
                 d="M123.359,79.775l0,72.843"
-                style={{ fill: "none", stroke: "#000", strokeWidth: 20 }}
+                style={{
+                  fill: "none",
+                  stroke: dark ? "#fff" : "#000",
+                  strokeWidth: 20,
+                }}
               />
               <path
                 id="mouse"
                 d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
-                style={{ fill: "none", stroke: "#000", strokeWidth: 20 }}
+                style={{
+                  fill: "none",
+                  stroke: dark ? "#fff" : "#000",
+                  strokeWidth: 20,
+                }}
               />
             </svg>
           </a>
