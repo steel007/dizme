@@ -1,5 +1,5 @@
 import { useState } from "react";
-const MobileMenu = () => {
+const MobileMenu = ({ logo }) => {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="dizme_tm_mobile_menu">
@@ -7,7 +7,7 @@ const MobileMenu = () => {
         <div className="mobile_in">
           <div className="logo">
             <a href="#">
-              <img src="img/logo/logo.png" alt="" />
+              <img src={logo} alt="" />
             </a>
           </div>
           <div className="trigger">

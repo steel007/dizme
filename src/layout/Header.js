@@ -1,11 +1,11 @@
-const Header = () => {
+const Header = ({ logo }) => {
   return (
     <div className="dizme_tm_header">
       <div className="container">
         <div className="inner">
           <div className="logo">
             <a href="#">
-              <img src="img/logo/logo.png" alt="" />
+              <img src={logo} alt="" />
             </a>
           </div>
           <div className="menu">

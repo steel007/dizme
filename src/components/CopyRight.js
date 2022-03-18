@@ -1,4 +1,4 @@
-const CopyRight = () => {
+const CopyRight = ({ brandName }) => {
   return (
     <div className="dizme_tm_section">
       <div className="dizme_tm_copyright">
@@ -12,9 +12,9 @@ const CopyRight = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Marketify
+                  {brandName && brandName}
                 </a>{" "}
-                © 2022
+                © {new Date().getFullYear()}
               </p>
             </div>
             <div className="right wow fadeInRight" data-wow-duration="1s">

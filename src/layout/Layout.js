@@ -1,9 +1,10 @@
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import CopyRight from "../components/CopyRight";
 import ImageView from "../components/popup/ImageView";
 import VideoPopup from "../components/popup/VideoPopup";
 import {
   dataImage,
+  fatchData,
   scrollTop,
   scroll_,
   stickyNav,
@@ -16,6 +17,10 @@ import PreLoader from "./PreLoader";
 import Progressbar from "./Progressbar";
 
 const Layout = ({ children }) => {
+  const [siteInfo, setSiteInfo] = useState({});
+  useEffect(async () => {
+    setSiteInfo(await fatchData("/static/siteSetting.json"));
+  }, []);
   useEffect(() => {
     dataImage();
     wowJsAnimation();
@@ -29,10 +34,12 @@ const Layout = ({ children }) => {
       <ImageView />
       <VideoPopup />
       <div className="dizme_tm_all_wrap" data-magic-cursor="show">
-        <MobileMenu />
-        <Header />
+        <MobileMenu
+          logo={siteInfo && siteInfo.logo && siteInfo.logo["light"]}
+        />
+        <Header logo={siteInfo && siteInfo.logo && siteInfo.logo["light"]} />
         {children}
-        <CopyRight />
+        <CopyRight brandName={siteInfo && siteInfo.brandName} />
         <Cursor />
         <Progressbar />
       </div>
