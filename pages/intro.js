@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import Cursor from "../src/layout/Cursor";
+import PreLoader from "../src/layout/PreLoader";
 
 const Intro = () => {
   return (
@@ -8,6 +9,7 @@ const Intro = () => {
       <Head>
         <title>Dizme | Home</title>
       </Head>
+      <PreLoader />
       <div className="dizme_tm_all_wrap" data-magic-cursor="show">
         <div className="dizme_tm_intro">
           <div className="dizme_tm_intro_fixed_price">

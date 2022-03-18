@@ -84,7 +84,7 @@ export const preloader = () => {
   aali_tm_preloader();
   setTimeout(() => {
     document.querySelector("body").classList.add("opened");
-  }, 1500);
+  }, 3000);
 };
 
 export const aTagClick = () => {
