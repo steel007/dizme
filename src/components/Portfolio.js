@@ -1,6 +1,7 @@
 import Isotope from "isotope-layout";
 import { useEffect, useRef, useState } from "react";
 import { dataImage } from "../utilits";
+import DetailsPopup from "./popup/DetailsPopup";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -63,8 +64,13 @@ const Portfolio = () => {
     setFilterKey(key);
   };
   const activeBtn = (value) => (value === filterKey ? "current" : "");
+
+  // Popup
+  const [popup, setPopup] = useState(false);
+
   return (
     <div className="dizme_tm_section" id="portfolio">
+      <DetailsPopup open={popup} close={() => setPopup(false)} />
       <div className="dizme_tm_portfolio">
         <div className="container">
           <div className="dizme_tm_main_title" data-align="center">
@@ -245,7 +251,7 @@ const Portfolio = () => {
                 </div>
               </li>
 
-              <li className="detail grid-item">
+              <li className="detail grid-item" onClick={() => setPopup(true)}>
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -263,82 +269,6 @@ const Portfolio = () => {
                   <div className="mobile_title">
                     <h3>Global Evolution</h3>
                     <span>Detail</span>
-                  </div>
-                  <div className="hidden_content">
-                    <div className="popup_details">
-                      <div className="main_details">
-                        <div className="textbox">
-                          <p>
-                            We live in a world where we need to move quickly and
-                            iterate on our ideas as flexibly as possible.
-                          </p>
-                          <p>
-                            {` Mockups are useful both for the creative phase of
-                            the project - for instance when you're trying to
-                            figure out your user flows or the proper visual
-                            hierarchy - and the production phase when they phase
-                            when they will represent the target product.
-                            Building mockups strikes the ideal balance ease of
-                            modification.`}
-                          </p>
-                        </div>
-                        <div className="detailbox">
-                          <ul>
-                            <li>
-                              <span className="first">Client</span>
-                              <span>Alvaro Morata</span>
-                            </li>
-                            <li>
-                              <span className="first">Category</span>
-                              <span>
-                                <a href="#">Detail</a>
-                              </span>
-                            </li>
-                            <li>
-                              <span className="first">Date</span>
-                              <span>March 07, 2021</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="additional_images">
-                        <ul>
-                          <li>
-                            <div className="list_inner">
-                              <div className="my_image">
-                                <img src="img/thumbs/4-2.jpg" alt="" />
-                                <div
-                                  className="main"
-                                  data-img-url="img/portfolio/1.jpg"
-                                />
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="list_inner">
-                              <div className="my_image">
-                                <img src="img/thumbs/4-2.jpg" alt="" />
-                                <div
-                                  className="main"
-                                  data-img-url="img/portfolio/2.jpg"
-                                />
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="list_inner">
-                              <div className="my_image">
-                                <img src="img/thumbs/4-2.jpg" alt="" />
-                                <div
-                                  className="main"
-                                  data-img-url="img/portfolio/3.jpg"
-                                />
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </li>
