@@ -1,4 +1,13 @@
+import parse from "html-react-parser";
+import { useEffect, useState } from "react";
+import { fatchData } from "../utilits";
+
 const Home = () => {
+  const [data, setData] = useState({});
+  useEffect(async () => {
+    setData(await fatchData("/static/info.json"));
+  }, []);
+
   return (
     <div className="dizme_tm_section" id="home">
       <div className="dizme_tm_hero">
@@ -10,19 +19,16 @@ const Home = () => {
                 <h3 className="orangeText">{`Hello, I'm`}</h3>
               </div>
               <div className="name">
-                <h3>James Smith</h3>
+                <h3>{data && data.name}</h3>
               </div>
               <div className="job">
                 <p>
-                  A <span className="greenText">Creative Designer</span> From{" "}
-                  <span className="purpleText">New York</span>
+                  A <span className="greenText">{data && data.mainSkill}</span>{" "}
+                  From <span className="purpleText">{data.address}</span>
                 </p>
               </div>
               <div className="text">
-                <p>
-                  {`I'm creative designer based in New York, and I'm very
-                  passionate and dedicated to my work.`}
-                </p>
+                <p>{data.bio}</p>
               </div>
               <div className="button">
                 <div className="dizme_tm_button">
@@ -32,50 +38,35 @@ const Home = () => {
                 </div>
                 <div className="social">
                   <ul>
-                    <li>
-                      <a href="#">
-                        <i className="icon-facebook-1" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="icon-twitter-1" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="icon-linkedin-1" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="icon-behance" />
-                      </a>
-                    </li>
+                    {data &&
+                      data.social &&
+                      data.social.map((social, i) => (
+                        <li key={i}>
+                          <a href="#">
+                            <i className={social.icon} />
+                          </a>
+                        </li>
+                      ))}
                   </ul>
                 </div>
               </div>
             </div>
             <div className="avatar">
               <div className="image">
-                <img src="img/slider/avatar.png" alt="" />
-                <span className="skills illustrator anim_moveBottom">
-                  <img
-                    className="svg"
-                    src="img/svg/skills/illustrator.svg"
-                    alt=""
-                  />
-                </span>
-                <span className="skills photoshop anim_moveBottom">
-                  <img
-                    className="svg"
-                    src="img/svg/skills/photoshop.svg"
-                    alt=""
-                  />
-                </span>
-                <span className="skills figma anim_moveBottom">
-                  <img className="svg" src="img/svg/skills/figma.svg" alt="" />
-                </span>
+                <img src={data && data.img} alt="" />
+                {data &&
+                  data.skills &&
+                  data.skills.map(
+                    (skill, i) =>
+                      skill.icon && (
+                        <span
+                          key={i}
+                          className={`skills ${skill.name} anim_moveBottom`}
+                        >
+                          {parse(skill.icon)}
+                        </span>
+                      )
+                  )}
               </div>
             </div>
           </div>

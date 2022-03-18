@@ -71,7 +71,7 @@ const ImageView = () => {
           });
         }
       });
-    }, 1000);
+    }, 1500);
   }, []);
   return (
     <Fragment>

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import SwiperCore, {
   Autoplay,
   EffectFade,
@@ -5,9 +6,14 @@ import SwiperCore, {
   Pagination,
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { fatchData } from "../utilits";
 SwiperCore.use([Pagination, Navigation, EffectFade, Autoplay]);
 
 const Testimonial = () => {
+  const [data, setData] = useState([]);
+  useEffect(async () => {
+    setData(await fatchData("/static/testimonial.json"));
+  }, []);
   const props = {
     slidesPerView: 1,
     loop: true,
@@ -16,6 +22,7 @@ const Testimonial = () => {
       clickable: true,
     },
   };
+  console.log(data);
   return (
     <div className="dizme_tm_section">
       <div className="dizme_tm_testimonials">
@@ -31,97 +38,44 @@ const Testimonial = () => {
           <div className="total">
             <div className="in">
               <Swiper {...props} className="">
-                <SwiperSlide>
-                  <div className="icon">
-                    <img
-                      className="svg"
-                      src="img/svg/testimonials/quote.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="text">
-                    <p>
-                      I rarely like to write reviews, but the Marketify team
-                      truly deserve a standing ovation for their customer
-                      support, customisation and most importantly, friendliness
-                      and professionalism. Many thanks once again for everything
-                      and hope that I get to deal with you again in the near
-                      future.
-                    </p>
-                  </div>
-                  <div className="short">
-                    <div className="image">
-                      <div
-                        className="main"
-                        data-img-url="img/testimonials/4.jpg"
-                      />
-                    </div>
-                    <div className="detail">
-                      <h3>Mike Anderson</h3>
-                      <span>Vivaco Studio</span>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon">
-                    <img
-                      className="svg"
-                      src="img/svg/testimonials/quote.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="text">
-                    <p>
-                      Really the Code Quality, Customer Support, and design are
-                      awesome and its good support they are giving. They give an
-                      instant solution to our needs. Really awesome. I will
-                      strongly recommend to my friends. Simply amazing team and
-                      amazing theme! Thank you from United States of America!
-                    </p>
-                  </div>
-                  <div className="short">
-                    <div className="image">
-                      <div
-                        className="main"
-                        data-img-url="img/testimonials/3.jpg"
-                      />
-                    </div>
-                    <div className="detail">
-                      <h3>Keita Smith</h3>
-                      <span>ABC Group</span>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon">
-                    <img
-                      className="svg"
-                      src="img/svg/testimonials/quote.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="text">
-                    <p>
-                      Loved the template design, documentation, customizability
-                      and the customer support from Marketify team! I am a noob
-                      in programming with very little knowledge about coding but
-                      the Marketify team helped me to launch my resume website
-                      successfully. Much recommended!
-                    </p>
-                  </div>
-                  <div className="short">
-                    <div className="image">
-                      <div
-                        className="main"
-                        data-img-url="img/testimonials/6.jpg"
-                      />
-                    </div>
-                    <div className="detail">
-                      <h3>Alan Walker</h3>
-                      <span>Web Designer</span>
-                    </div>
-                  </div>
-                </SwiperSlide>
+                {data &&
+                  data.map((data, i) => (
+                    <SwiperSlide key={i}>
+                      <div className="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          version="1.1"
+                          id="Layer_1"
+                          x="0px"
+                          y="0px"
+                          width="200px"
+                          height="200px"
+                          viewBox="796 698 200 200"
+                          enableBackground="new 796 698 200 200"
+                          xmlSpace="preserve"
+                          className="svg replaced-svg"
+                        >
+                          <g>
+                            <path d="M885.208,749.739v-40.948C836.019,708.791,796,748.81,796,798v89.209h89.208V798h-48.26   C836.948,771.39,858.598,749.739,885.208,749.739z" />
+                            <path d="M996,749.739v-40.948c-49.19,0-89.209,40.019-89.209,89.209v89.209H996V798h-48.26   C947.74,771.39,969.39,749.739,996,749.739z" />
+                          </g>
+                        </svg>
+                      </div>
+                      <div className="text">
+                        <p>{data.details}</p>
+                      </div>
+                      <div className="short">
+                        <div className="image">
+                          <div className="main" data-img-url={data.img} />
+                        </div>
+                        <div className="detail">
+                          <h3>{data.name}</h3>
+                          <span>{data.profession}</span>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
               </Swiper>
               <div className="owl-dots"></div>
             </div>

@@ -19,7 +19,6 @@ const Service = () => {
       });
     }, 1000);
   }, []);
-  useEffect(() => {}, []);
 
   const onClick = (index) => {
     setPopup(true);
@@ -48,7 +47,9 @@ const Service = () => {
               {data &&
                 data.map((data, i) => (
                   <li
-                    className="wow fadeInLeft"
+                    className={`wow ${
+                      (i * 1) % 2 === 0 ? "fadeInLeft" : "fadeInRight"
+                    }`}
                     data-wow-duration="1s"
                     key={i}
                     onClick={() => onClick(i)}

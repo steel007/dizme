@@ -20,7 +20,7 @@ const CopyRight = () => {
             <div className="right wow fadeInRight" data-wow-duration="1s">
               <ul>
                 <li>
-                  <a href="#">{`Terms &amp; Condition`}</a>
+                  <a href="#">{`Terms & Condition`}</a>
                 </li>
                 <li>
                   <a href="#">Privacy Policy</a>

@@ -1,82 +1,25 @@
+import { useEffect, useState } from "react";
+import { fatchData } from "../utilits";
 const Partners = () => {
+  const [data, setData] = useState([]);
+  useEffect(async () => {
+    setData(await fatchData("/static/partners.json"));
+  }, []);
   return (
     <div className="dizme_tm_section">
       <div className="dizme_tm_partners">
         <div className="container">
           <div className="partners_inner">
             <ul>
-              <li className="wow fadeIn" data-wow-duration="1s">
-                <div className="list_inner">
-                  <img src="img/partners/dark/1.png" alt="" />
-                  <a className="dizme_tm_full_link" a="" href="#" />
-                </div>
-              </li>
-              <li
-                className="wow fadeIn"
-                data-wow-duration="1s"
-                data-wow-delay="0.2s"
-              >
-                <div className="list_inner">
-                  <img src="img/partners/dark/2.png" alt="" />
-                  <a className="dizme_tm_full_link" a="" href="#" />
-                </div>
-              </li>
-              <li
-                className="wow fadeIn"
-                data-wow-duration="1s"
-                data-wow-delay="0.4s"
-              >
-                <div className="list_inner">
-                  <img src="img/partners/dark/3.png" alt="" />
-                  <a className="dizme_tm_full_link" a="" href="#" />
-                </div>
-              </li>
-              <li
-                className="wow fadeIn"
-                data-wow-duration="1s"
-                data-wow-delay="0.6s"
-              >
-                <div className="list_inner">
-                  <img src="img/partners/dark/4.png" alt="" />
-                  <a className="dizme_tm_full_link" a="" href="#" />
-                </div>
-              </li>
-              <li className="wow fadeIn" data-wow-duration="1s">
-                <div className="list_inner">
-                  <img src="img/partners/dark/5.png" alt="" />
-                  <a className="dizme_tm_full_link" a="" href="#" />
-                </div>
-              </li>
-              <li
-                className="wow fadeIn"
-                data-wow-duration="1s"
-                data-wow-delay="0.2s"
-              >
-                <div className="list_inner">
-                  <img src="img/partners/dark/6.png" alt="" />
-                  <a className="dizme_tm_full_link" a="" href="#" />
-                </div>
-              </li>
-              <li
-                className="wow fadeIn"
-                data-wow-duration="1s"
-                data-wow-delay="0.4s"
-              >
-                <div className="list_inner">
-                  <img src="img/partners/dark/7.png" alt="" />
-                  <a className="dizme_tm_full_link" a="" href="#" />
-                </div>
-              </li>
-              <li
-                className="wow fadeIn"
-                data-wow-duration="1s"
-                data-wow-delay="0.6s"
-              >
-                <div className="list_inner">
-                  <img src="img/partners/dark/8.png" alt="" />
-                  <a className="dizme_tm_full_link" a="" href="#" />
-                </div>
-              </li>
+              {data &&
+                data.map((img, i) => (
+                  <li className="wow fadeIn" data-wow-duration="1s" key={i}>
+                    <div className="list_inner">
+                      <img src={img.logo && img.logo["light"]} alt="" />
+                      <a className="dizme_tm_full_link" a="" href={img.link} />
+                    </div>
+                  </li>
+                ))}
             </ul>
           </div>
         </div>

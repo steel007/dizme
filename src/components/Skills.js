@@ -1,7 +1,11 @@
-import { useEffect } from "react";
-import { activeSkillProgress } from "../utilits";
+import { useEffect, useState } from "react";
+import { activeSkillProgress, fatchData } from "../utilits";
 
 const Skills = () => {
+  const [data, setData] = useState({});
+  useEffect(async () => {
+    setData(await fatchData("/static/info.json"));
+  }, []);
   useEffect(() => {
     window.addEventListener("scroll", activeSkillProgress);
   }, []);
@@ -28,51 +32,25 @@ const Skills = () => {
                 className="dodo_progress wow fadeInUp"
                 data-wow-duration="1s"
               >
-                <div
-                  className="progress_inner skillsInner___"
-                  data-value={85}
-                  data-color="#f75023"
-                >
-                  <span>
-                    <span className="label">Illustrator</span>
-                    <span className="number">85%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
+                {data &&
+                  data.skills &&
+                  data.skills.map((skill, i) => (
+                    <div
+                      className="progress_inner skillsInner___"
+                      data-value={skill.value}
+                      data-color={skill.color}
+                    >
+                      <span>
+                        <span className="label">{skill.name}</span>
+                        <span className="number">{skill.value}%</span>
+                      </span>
+                      <div className="background">
+                        <div className="bar">
+                          <div className="bar_in" />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="progress_inner skillsInner___"
-                  data-value={95}
-                  data-color="#1cbe59"
-                >
-                  <span>
-                    <span className="label">Photoshop</span>
-                    <span className="number">95%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="progress_inner skillsInner___"
-                  data-value={75}
-                  data-color="#8067f0"
-                >
-                  <span>
-                    <span className="label">Figma</span>
-                    <span className="number">75%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
+                  ))}
               </div>
             </div>
             <div className="right">
