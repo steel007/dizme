@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fatchData } from "../utilits";
+import { aTagClick, fatchData } from "../utilits";
 import BlogPopUp from "./popup/BlogPopUp";
 const News = () => {
   const [data, setData] = useState([]);
@@ -7,6 +7,7 @@ const News = () => {
   const [popup, setPopup] = useState(false);
   useEffect(async () => {
     setData(await fatchData("/static/blog.json"));
+    aTagClick();
   }, []);
   return (
     <div className="dizme_tm_section" id="blog">
