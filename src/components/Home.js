@@ -14,7 +14,7 @@ const Home = ({ dark }) => {
         <div
           className="background"
           data-img-url={`img/slider/${dark ? 2 : 1}.jpg`}
-          style={{ backgroundImage: `img/slider/${dark ? 2 : 1}.jpg` }}
+          // style={{ backgroundImage: `img/slider/${dark ? 2 : 1}.jpg` }}
         />
         <div className="container">
           <div className="content">
@@ -23,7 +23,7 @@ const Home = ({ dark }) => {
                 <h3 className="orangeText">{`Hello, I'm`}</h3>
               </div>
               <div className="name">
-                <h3>{data && data.name}</h3>
+                <h3>{data && data.name ? data.name : "name"}</h3>
               </div>
               <div className="job">
                 <p>
@@ -57,7 +57,10 @@ const Home = ({ dark }) => {
             </div>
             <div className="avatar">
               <div className="image">
-                <img src={data && data.img} alt="" />
+                <img
+                  src={data && data.img ? data.img : "/img/slider/avatar.png"}
+                  alt="image"
+                />
                 {data &&
                   data.skills &&
                   data.skills.map(

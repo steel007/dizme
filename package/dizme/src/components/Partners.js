@@ -17,7 +17,7 @@ const Partners = ({ dark }) => {
                     <div className="list_inner">
                       <img
                         src={img.logo && img.logo[dark ? "dark" : "light"]}
-                        alt=""
+                        alt="image"
                       />
                       <a className="dizme_tm_full_link" a="" href={img.link} />
                     </div>
@@ -27,7 +27,7 @@ const Partners = ({ dark }) => {
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/partners/1.png" alt="" />
+          <img src="img/brushes/partners/1.png" alt="image" />
         </div>
       </div>
     </div>

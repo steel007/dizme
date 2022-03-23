@@ -132,7 +132,7 @@ const Testimonial = () => {
           </div>
         </div>
         <div className="brush_1 wow fadeInRight" data-wow-duration="1s">
-          <img src="img/brushes/testimonials/1.png" alt="" />
+          <img src="img/brushes/testimonials/1.png" alt="image" />
         </div>
       </div>
     </div>

@@ -57,7 +57,10 @@ const Home = ({ dark }) => {
             </div>
             <div className="avatar">
               <div className="image">
-                <img src={data && data.img} alt="" />
+                <img
+                  src={data && data.img ? data.img : "/img/slider/avatar.png"}
+                  alt="image"
+                />
                 {data &&
                   data.skills &&
                   data.skills.map(

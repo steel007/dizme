@@ -115,7 +115,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
-              <img src="img/brushes/contact/2.png" alt="" />
+              <img src="img/brushes/contact/2.png" alt="image" />
             </div>
           </div>
           <div className="dizme_tm_map wow fadeInUp" data-wow-duration="1s">
@@ -154,7 +154,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/contact/1.png" alt="" />
+          <img src="img/brushes/contact/1.png" alt="image" />
         </div>
       </div>
     </div>

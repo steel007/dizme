@@ -6,9 +6,7 @@ const MobileMenu = ({ logo }) => {
       <div className="mobile_menu_inner">
         <div className="mobile_in">
           <div className="logo">
-            <a href="#">
-              <img src={logo} alt="" />
-            </a>
+            <a href="#">{logo && <img src={logo} alt="image" />}</a>
           </div>
           <div className="trigger">
             <div

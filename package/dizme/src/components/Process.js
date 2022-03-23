@@ -23,7 +23,7 @@ const Process = ({ dark }) => {
                             src={`img/brushes/process${dark ? "/dark" : ""}/${
                               i + 1
                             }.png`}
-                            alt=""
+                            alt="image"
                           />
                           {parse(data.icons[dark ? "dark" : "light"])}
                         </span>

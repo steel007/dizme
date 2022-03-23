@@ -45,46 +45,53 @@ const Service = () => {
           <div className="service_list">
             <ul>
               {data &&
-                data.map((data, i) => (
-                  <li
-                    className={`wow ${
-                      (i * 1) % 2 === 0 ? "fadeInLeft" : "fadeInRight"
-                    }`}
-                    data-wow-duration="1s"
-                    key={i}
-                    onClick={() => onClick(i)}
-                  >
-                    <div className="list_inner tilt-effect">
-                      <span className="icon">
-                        {parse(data.icon.svg)}
-                        <img className="back" src={data.icon.iconBg} alt="" />
-                      </span>
-                      <div className="title">
-                        <h3>{data.title}</h3>
-                        <span className="price">
-                          Starts from <span>${data.price}</span>
-                        </span>
-                      </div>
-                      <div className="text">
-                        <p>{data.shortDec}</p>
-                      </div>
-                      <a className="dizme_tm_full_link" href="#" />
-                      <img
-                        className="popup_service_image"
-                        src="img/service/1.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </li>
-                ))}
+                data.map(
+                  (data, i) =>
+                    data && (
+                      <li
+                        className={`wow ${
+                          (i * 1) % 2 === 0 ? "fadeInLeft" : "fadeInRight"
+                        }`}
+                        data-wow-duration="1s"
+                        key={i}
+                        onClick={() => onClick(i)}
+                      >
+                        <div className="list_inner tilt-effect">
+                          <span className="icon">
+                            {parse(data.icon.svg)}
+                            <img
+                              className="back"
+                              src={data.icon.iconBg}
+                              alt="image"
+                            />
+                          </span>
+                          <div className="title">
+                            <h3>{data.title}</h3>
+                            <span className="price">
+                              Starts from <span>${data.price}</span>
+                            </span>
+                          </div>
+                          <div className="text">
+                            <p>{data.shortDec}</p>
+                          </div>
+                          <a className="dizme_tm_full_link" href="#" />
+                          <img
+                            className="popup_service_image"
+                            src="img/service/1.jpg"
+                            alt="image"
+                          />
+                        </div>
+                      </li>
+                    )
+                )}
             </ul>
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/service/5.png" alt="" />
+          <img src="img/brushes/service/5.png" alt="image" />
         </div>
         <div className="brush_2 wow zoomIn" data-wow-duration="1s">
-          <img src="img/brushes/service/6.png" alt="" />
+          <img src="img/brushes/service/6.png" alt="image" />
         </div>
       </div>
     </div>

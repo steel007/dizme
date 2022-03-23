@@ -7,7 +7,7 @@ const About = () => {
           <div className="wrapper">
             <div className="left">
               <div className="image">
-                <img src="img/about/1.jpg" alt="" />
+                <img src="img/about/1.jpg" alt="image" />
                 <div className="numbers year">
                   <div className="wrapper">
                     <h3>
@@ -61,10 +61,10 @@ const About = () => {
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/about/1.png" alt="" />
+          <img src="img/brushes/about/1.png" alt="image" />
         </div>
         <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
-          <img src="img/brushes/about/2.png" alt="" />
+          <img src="img/brushes/about/2.png" alt="image" />
         </div>
       </div>
     </div>

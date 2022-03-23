@@ -25,7 +25,7 @@ const News = () => {
                   <li className="wow fadeInUp" data-wow-duration="1s" key={i}>
                     <div className="list_inner">
                       <div className="image">
-                        <img src="img/thumbs/42-29.jpg" alt="" />
+                        <img src="img/thumbs/42-29.jpg" alt="image" />
                         <div
                           className="main"
                           data-img-url={blog && blog.img}
@@ -34,7 +34,11 @@ const News = () => {
                           }}
                         />
                         <div className="date">
-                          <h3>{blog && blog.date && blog.date.date}</h3>
+                          <h3>
+                            {blog && blog.date && blog.date.date
+                              ? blog.date.date
+                              : "date"}
+                          </h3>
                           <span>{blog && blog.date && blog.date.month}</span>
                         </div>
                         <a
@@ -71,10 +75,10 @@ const News = () => {
           </div>
         </div>
         <div className="brush_1 wow zoomIn" data-wow-duration="1s">
-          <img src="img/brushes/news/1.png" alt="" />
+          <img src="img/brushes/news/1.png" alt="image" />
         </div>
         <div className="brush_2 wow zoomIn" data-wow-duration="1s">
-          <img src="img/brushes/news/2.png" alt="" />
+          <img src="img/brushes/news/2.png" alt="image" />
         </div>
       </div>
     </div>
