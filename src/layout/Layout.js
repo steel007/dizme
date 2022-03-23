@@ -21,9 +21,9 @@ const Layout = ({ children, dark }) => {
   const [siteInfo, setSiteInfo] = useState({});
   useEffect(async () => {
     setSiteInfo(await fatchData("/static/siteSetting.json"));
+    dataImage();
   }, []);
   useEffect(() => {
-    dataImage();
     wowJsAnimation();
     aTagClick();
     window.addEventListener("scroll", scroll_);

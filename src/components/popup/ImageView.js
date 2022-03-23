@@ -37,14 +37,14 @@ const ImgViews = ({ close, src }) => {
         >
           <div className="mfp-content" ref={domNode}>
             <div className="mfp-iframe-scaler">
-              <button
+              {/* <button
                 title="Close (Esc)"
                 type="button"
                 className="mfp-close"
                 onClick={() => close()}
               >
                 ×
-              </button>
+              </button> */}
               <img className="mfp-img" src={src} />
             </div>
           </div>
@@ -64,11 +64,13 @@ const ImageView = () => {
       const a = document.querySelectorAll("a");
       a.forEach((a) => {
         if (a.href.includes("img/")) {
-          a.addEventListener("click", (e) => {
-            e.preventDefault();
-            setImgValue(a.href);
-            setImg(true);
-          });
+          if (a.getAttribute("download") === null) {
+            a.addEventListener("click", (e) => {
+              e.preventDefault();
+              setImgValue(a.href);
+              setImg(true);
+            });
+          }
         }
       });
     }, 1500);
