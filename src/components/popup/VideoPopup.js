@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react";
-import ReactDOM from "react-dom";
 import useClickOutside from "../../useClickOutside";
 
 const VideoPopup_ = ({ close, videoID }) => {
@@ -53,7 +52,7 @@ const VideoPopup = () => {
           a.href.includes("vimeo.com") ||
           a.href.includes("soundcloud.com")
         ) {
-          ReactDOM.findDOMNode(a).addEventListener("click", (e) => {
+          a.addEventListener("click", (e) => {
             e.preventDefault();
             setVideoValue(a.href);
             setVideo(true);

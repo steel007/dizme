@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react";
-import ReactDOM from "react-dom";
 import useClickOutside from "../../useClickOutside";
 
 const ImgViews = ({ close, src }) => {
@@ -47,7 +46,7 @@ const ImageView = () => {
       a.forEach((a) => {
         if (a.href.includes("img/")) {
           if (a.getAttribute("download") === null) {
-            ReactDOM.findDOMNode(a).addEventListener("click", (e) => {
+            a.addEventListener("click", (e) => {
               e.preventDefault();
               setImgValue(a.href);
               setImg(true);
