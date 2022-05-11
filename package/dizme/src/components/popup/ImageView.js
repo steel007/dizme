@@ -1,24 +1,6 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
-
-let useClickOutside = (handler) => {
-  let domNode = useRef();
-
-  useEffect(() => {
-    let maybeHandler = (event) => {
-      if (!domNode.current.contains(event.target)) {
-        handler();
-      }
-    };
-
-    document.addEventListener("mousedown", maybeHandler);
-
-    return () => {
-      document.removeEventListener("mousedown", maybeHandler);
-    };
-  });
-
-  return domNode;
-};
+import React, { Fragment, useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+import useClickOutside from "../../useClickOutside";
 
 const ImgViews = ({ close, src }) => {
   let domNode = useClickOutside(() => {
@@ -65,7 +47,7 @@ const ImageView = () => {
       a.forEach((a) => {
         if (a.href.includes("img/")) {
           if (a.getAttribute("download") === null) {
-            a.addEventListener("click", (e) => {
+            ReactDOM.findDOMNode(a).addEventListener("click", (e) => {
               e.preventDefault();
               setImgValue(a.href);
               setImg(true);

@@ -19,7 +19,7 @@ const BlogPopUp = ({ data, open, close }) => {
                 />
               </div>
               <div className="details">
-                <h3>{data && data.title}</h3>
+                <h3>{data && data.title ? data.title : "Title"}</h3>
                 <span>
                   <a href="#">{data && data.category}</a>
                 </span>

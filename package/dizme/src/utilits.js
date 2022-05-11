@@ -1,4 +1,5 @@
-const aali_tm_preloader = () => {
+import ReactDOM from "react-dom";
+const preloader_ = () => {
   let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
     navigator.userAgent
   )
@@ -35,10 +36,10 @@ export const customCursor = () => {
     t = document.querySelector(".cursor-outer");
 
   function mouseEvent(element) {
-    element.addEventListener("mouseenter", function () {
+    ReactDOM.findDOMNode(element).addEventListener("mouseenter", function () {
       e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
     });
-    element.addEventListener("mouseleave", function () {
+    ReactDOM.findDOMNode(element).addEventListener("mouseleave", function () {
       e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover");
     });
   }
@@ -81,7 +82,7 @@ export const customCursor = () => {
 };
 
 export const preloader = () => {
-  aali_tm_preloader();
+  preloader_();
   setTimeout(() => {
     document.querySelector("body").classList.add("opened");
   }, 3000);
@@ -91,8 +92,7 @@ export const aTagClick = () => {
   const aTag = document.querySelectorAll("[href='#']");
   for (let i = 0; i < aTag.length; i++) {
     const a = aTag[i];
-    a.addEventListener("click", (e) => {
-      console.log("hello");
+    ReactDOM.findDOMNode(a).addEventListener("click", (e) => {
       e.preventDefault();
     });
   }
@@ -180,33 +180,6 @@ export const scrollTop = () => {
   } else {
     bar.classList.remove("animate");
   }
-};
-
-export const portfolioHover = () => {
-  const dizme_tm_portfolio_animation_wrap = document.querySelectorAll(
-      ".dizme_tm_portfolio_animation_wrap"
-    ),
-    dizme_tm_portfolio_titles = document.querySelector(
-      ".dizme_tm_portfolio_titles"
-    );
-  dizme_tm_portfolio_animation_wrap.forEach((element) => {
-    element.addEventListener("mousemove", () => {
-      let title = element.getAttribute("data-title"),
-        category = element.getAttribute("data-category");
-      if (title) {
-        dizme_tm_portfolio_titles.classList.add("visible");
-        dizme_tm_portfolio_titles.innerHTML =
-          title + '<span class="work__cat">' + category + "</span>";
-      }
-      document.addEventListener("mousemove", (e) => {
-        dizme_tm_portfolio_titles.style.left = `${e.clientX - 10}px`;
-        dizme_tm_portfolio_titles.style.top = `${e.clientY + 25}px`;
-      });
-    });
-    element.addEventListener("mouseleave", () => {
-      dizme_tm_portfolio_titles.classList.remove("visible");
-    });
-  });
 };
 
 export const fatchData = async (url) => {

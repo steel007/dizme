@@ -1,13 +1,11 @@
 import Isotope from "isotope-layout";
 import { useEffect, useRef, useState } from "react";
-import { portfolioHover } from "../../package/dizme/src/utilits";
 import { dataImage } from "../utilits";
 import DetailsPopup from "./popup/DetailsPopup";
 
 const Portfolio = () => {
   useEffect(() => {
     dataImage();
-    portfolioHover();
   }, []);
 
   // Isotope

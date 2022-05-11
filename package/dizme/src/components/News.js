@@ -34,11 +34,7 @@ const News = () => {
                           }}
                         />
                         <div className="date">
-                          <h3>
-                            {blog && blog.date && blog.date.date
-                              ? blog.date.date
-                              : "date"}
-                          </h3>
+                          <h3>{blog && blog.date && blog.date.date}</h3>
                           <span>{blog && blog.date && blog.date.month}</span>
                         </div>
                         <a
