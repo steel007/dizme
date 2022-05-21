@@ -17,7 +17,7 @@ const Intro = () => {
             <span className="anim" />
             <span className="anim" />
             <a href="#" target="_blank" className="pricing-info anim">
-              -70%
+              -20%
             </a>
           </div>
           <div className="short_info">
