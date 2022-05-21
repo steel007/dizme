@@ -4,6 +4,7 @@ import About from "../src/components/About";
 import Contact from "../src/components/Contact";
 import Home from "../src/components/Home";
 import News from "../src/components/News";
+import Newsletter from "../src/components/Newsletter";
 import Partners from "../src/components/Partners";
 import Process from "../src/components/Process";
 import Service from "../src/components/Service";
@@ -46,6 +47,7 @@ const Index = () => {
       {/* /PARTNERS */}
       {/* NEWS */}
       <News />
+      <Newsletter />
       <Contact />
     </Layout>
   );

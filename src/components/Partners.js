@@ -13,7 +13,12 @@ const Partners = ({ dark }) => {
             <ul>
               {data &&
                 data.map((img, i) => (
-                  <li className="wow fadeIn" data-wow-duration="1s" key={i}>
+                  <li
+                    className="wow fadeIn"
+                    data-wow-duration="1s"
+                    key={i}
+                    data-wow-delay={`0.${i + 1 * 2}s`}
+                  >
                     <div className="list_inner">
                       <img
                         src={img.logo && img.logo[dark ? "dark" : "light"]}

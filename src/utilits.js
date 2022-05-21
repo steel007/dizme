@@ -22,10 +22,12 @@ const preloader_ = () => {
 };
 
 export const wowJsAnimation = () => {
-  if (typeof window !== "undefined") {
-    window.WOW = require("wowjs");
-  }
-  new WOW.WOW().init();
+  setTimeout(() => {
+    if (typeof window !== "undefined") {
+      window.WOW = require("wowjs");
+    }
+    new WOW.WOW().init();
+  }, 500);
 };
 export const customCursor = () => {
   var myCursor = document.querySelectorAll(".mouse-cursor"),

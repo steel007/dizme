@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 import ServicePopup from "./popup/ServicePopup";
 
-const Service = () => {
+const Service = ({ dark }) => {
   const [data, setData] = useState([]);
   const [popupdata, setPopupdata] = useState({});
   const [popup, setPopup] = useState(false);
@@ -59,11 +59,19 @@ const Service = () => {
                         <div className="list_inner tilt-effect">
                           <span className="icon">
                             {parse(data.icon.svg)}
-                            <img
-                              className="back"
-                              src={data.icon.iconBg}
-                              alt="image"
-                            />
+                            {dark ? (
+                              <img
+                                className="back"
+                                src={data.icon.iconBgDark}
+                                alt="image"
+                              />
+                            ) : (
+                              <img
+                                className="back"
+                                src={data.icon.iconBg}
+                                alt="image"
+                              />
+                            )}
                           </span>
                           <div className="title">
                             <h3>{data.title}</h3>
