@@ -22,32 +22,32 @@ const Index = () => {
     document.querySelector("body").classList.add("dark");
   }, []);
   return (
-    <Layout>
+       <Layout dark>
       <Head>
         <title>Dizme | Home</title>
       </Head>
-      <Home />
+      <Home dark />
       {/* HERO */}
       {/* PROCESS */}
-      <Process />
+      <Process dark />
       {/* /PROCESS */}
       {/* ABOUT */}
-      <About />
+      <About dark />
       {/* /ABOUT */}
       {/* PORTFOLIO */}
       <Portfolio />
       {/* /PORTFOLIO */}
       {/* SKILLS */}
-      <Skills />
+      <Skills dark />
       {/* /SKILLS */}
       {/* SERVICES */}
-      <Service />
+      <Service dark />
       {/* /SERVICES */}
       {/* TESTIMONIALS */}
       <Testimonial />
       {/* /TESTIMONIALS */}
       {/* PARTNERS */}
-      <Partners />
+      <Partners dark />
       {/* /PARTNERS */}
       {/* NEWS */}
       <News />
