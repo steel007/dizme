@@ -1,9 +1,9 @@
 {
-  "name": "James Smith",
-  "address": "New York",
-  "bio": "I'm creative designer based in New York, and I'm very passionate and dedicated to my work.",
+  "name": "Spencer Teel",
+  "address": "Houston",
+  "bio": "I'm a Creative Designer and SharePoint Consultant based in Houston, Texas.",
   "mainSkill": "Creative Designer",
-  "img": "/img/slider/avatar.png",
+  "img": "https://steelwebs.com/resume/public/img/slider/avatar.png",
   "skills": [
     {
       "name": "illustrator",
