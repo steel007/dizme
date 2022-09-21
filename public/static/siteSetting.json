@@ -1,7 +1,7 @@
 {
   "logo": {
-    "dark": "https://steelwebs.com/resume/public/img/logo/logo.png",
-    "light": "img/logo/logo.png"
+    "dark": "https://steelwebs.com/resume/public/img/logo/dark.png",
+    "light": "https://steelwebs.com/resume/public/img/logo/logo.png"
   },
   "brandName": "steelwebs"
 }
