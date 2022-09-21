@@ -1,7 +1,7 @@
 {
   "logo": {
-    "dark": "img/logo/dark.png",
+    "dark": "https://steelwebs.com/resume/public/img/logo/logo.png",
     "light": "img/logo/logo.png"
   },
-  "brandName": "Codeefly"
+  "brandName": "steelwebs"
 }
