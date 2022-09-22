@@ -16,7 +16,7 @@
     ]
   },
   {
-    "title": "Graphic Design",
+    "title": "UI/UX Design",
     "price": "199",
     "img": "img/service/2.jpg",
     "shortDec": "Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development",
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "title": "UI/UX Design",
+    "title": "SharePoint Administration",
     "price": "299",
     "img": "img/service/3.jpg",
     "shortDec": "Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "title": "Web Design",
+    "title": "SharePoint Development",
     "price": "399",
     "img": "img/service/4.jpg",
     "shortDec": "Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development",
