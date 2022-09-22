@@ -21,8 +21,8 @@ const Skills = ({ dark }) => {
                 data-wow-duration="1s"
                 data-align="left"
               >
-                <span>Design is Life</span>
-                <h3>I Develop Skills Regularly to Keep Me Update</h3>
+                <span>Design is my passion</span>
+                <h3>I Develop Skills Regularly to Keep Me Updated</h3>
                 <p>
                   Most common methods for designing websites that work well on
                   desktop is responsive and adaptive design
