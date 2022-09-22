@@ -42,16 +42,6 @@ const Index = () => {
       {/* /SKILLS */}
       {/* SERVICES */}
       <Service dark />
-      {/* /SERVICES */}
-      {/* TESTIMONIALS */}
-      <Testimonial />
-      {/* /TESTIMONIALS */}
-      {/* PARTNERS */}
-      <Partners dark />
-      {/* /PARTNERS */}
-      {/* NEWS */}
-      <News />
-      <Newsletter />
       <Contact />
     </Layout>
   );
