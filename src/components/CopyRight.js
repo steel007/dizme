@@ -8,7 +8,7 @@ const CopyRight = ({ brandName }) => {
               <p>
                 Developed with love by{" "}
                 <a
-                  href="https://themeforest.net/user/codeefly"
+                  href="https://steelwebs.com"
                   target="_blank"
                   rel="noreferrer"
                 >
