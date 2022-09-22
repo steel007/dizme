@@ -27,7 +27,8 @@
   "social": [
     { "name": "facebook", "icon": "icon-facebook-1", "url": "https://www.facebook.com/spencer.teel" },
     { "name": "github", "icon": "icon-github-1", "url": "https://github.com/steel007" },
-    { "name": "linkedin", "icon": "icon-linkedin-1", "url": "http://www.linkedin.com/in/spencerteel/": "#" }
+    { "name": "linkedin", "icon": "icon-linkedin-1", "url": "http://www.linkedin.com/in/spencerteel/" },
+    { "name": "behance", "icon": "icon-behance", "url": "#" }
   ],
   "contact": {
     "address": "1400 Smith St, Houston, TX 77002",
