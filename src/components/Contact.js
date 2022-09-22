@@ -14,7 +14,7 @@ const Contact = () => {
             <h3>I Want To Hear From You</h3>
             <p>
               Please fill out the form on this section to contact with me. Or
-              call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday
+              call between 8:00 a.m. and 5:00 p.m. CST, Monday through Friday
             </p>
           </div>
           <div className="contact_inner">
@@ -125,7 +125,7 @@ const Contact = () => {
                   height={375}
                   style={{ width: "100%" }}
                   id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=1400%20Smith%20St,%20Houston,%20TX%2077002,%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 />
                 <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon" />
                 <br />
