@@ -25,9 +25,6 @@ const Header = ({ logo }) => {
                 <a href="#service">Service</a>
               </li>
               <li>
-                <a href="#blog">Blog</a>
-              </li>
-              <li>
                 <a href="#contact">Contact</a>
               </li>
               <li className="download_cv">
