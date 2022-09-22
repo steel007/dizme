@@ -122,7 +122,7 @@ const Portfolio = () => {
                   >
                     <a
                       className="popup-youtube"
-                      href="https://www.youtube.com/embed/7e90gBu4pas?autoplay=1"
+                      href="https://www.youtube.com/watch?v=5dsN3hxjBrg?autoplay=1"
                     >
                       <img src="img/thumbs/42-56.jpg" alt="image" />
                       <div
