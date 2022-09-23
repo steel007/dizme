@@ -115,7 +115,7 @@ const Contact = () => {
                 <div className="dizme_tm_button">
 
                 
-                <a href="mailto:steel@steelwebs.com" className="dizme_tm_button">Send Email</a>
+                <a href="mailto:steel@steelwebs.com"><span>Send Email</span></a>
                 </div>  </div>
             </div>
             <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
