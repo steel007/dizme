@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 const Contact = () => {
@@ -113,7 +112,11 @@ const Contact = () => {
                     </a>
                   </div>
                 </form> */}
-            <div class="dizme_tm_button"><a id="send_message" href="mailto:steel@steelwebs.com "><span>Submit Now</span></a></div>  </div>
+                <div className="dizme_tm_button">
+
+                
+                <a href="mailto:steel@steelwebs.com" className="dizme_tm_button">Send Email</a>
+                </div>  </div>
             </div>
             <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
               <img src="img/brushes/contact/2.png" alt="image" />
