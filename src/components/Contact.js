@@ -13,7 +13,9 @@ const Contact = () => {
             <span>Contact Me</span>
             <h3>I Want To Hear From You</h3>
             <p>
-              Please fill out this form to contact me.
+              Please click the email button to contact me.
+            </p>
+             <p>
               You can call between 8:00 a.m. and 5:00 p.m. CST, Monday through Friday
             </p>
           </div>
@@ -115,7 +117,7 @@ const Contact = () => {
                 <div className="dizme_tm_button">
 
                 
-                <a href="mailto:steel@steelwebs.com"><span>Send Email</span></a>
+                <a href="mailto:steel@steelwebs.com?subject=Message from spencerteel.com page"><span>Send Email</span></a>
                 </div>  </div>
             </div>
             <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
