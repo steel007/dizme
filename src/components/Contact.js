@@ -61,7 +61,7 @@ const Contact = () => {
             </div>
             <div className="right wow fadeInRight" data-wow-duration="1s">
               <div className="fields">
-                <form
+                {/* <form
                   action="/"
                   method="post"
                   className="contact_form"
@@ -111,7 +111,8 @@ const Contact = () => {
                       <span>Submit Now</span>
                     </a>
                   </div>
-                </form>
+                </form> */}
+                <a href="mailto:steel@steelwebs.com" className="dizme_tm_button">Send Email</a>
               </div>
             </div>
             <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
