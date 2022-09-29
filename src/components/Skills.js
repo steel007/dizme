@@ -24,8 +24,8 @@ const Skills = ({ dark }) => {
                 <span>Design is my passion</span>
                 <h3>I Develop Skills Regularly to Keep Me Updated</h3>
                 <p>
-                  Most common methods for designing websites that work well on
-                  desktop is responsive and adaptive design
+                  I deploy responsive and adaptive website designs that work well on
+                  desktop, tablets, and mobile devices
                 </p>
               </div>
               <div
