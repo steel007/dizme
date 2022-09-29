@@ -11,7 +11,7 @@ const About = ({ dark }) => {
                 <div className="numbers year">
                   <div className="wrapper">
                     <h3>
-                      <Counter end={18} />
+                      <Counter end={13} />
                     </h3>
                     <span className="name">
                       Years of
@@ -23,7 +23,7 @@ const About = ({ dark }) => {
                 <div className="numbers project">
                   <div className="wrapper">
                     <h3>
-                      <Counter end={9} />K
+                      <Counter end={2} />K
                     </h3>
                     <span className="name">
                       Total
@@ -42,7 +42,7 @@ const About = ({ dark }) => {
               <div className="text wow fadeInUp" data-wow-duration="1s">
                 <p>
                   {`Hello there! I'm a web designer, and I'm very passionate and
-                  dedicated to my work. With 20 years experience as a
+                  dedicated to my work. With over a decade of experience as a
                   professional web developer, I have acquired the skills and
                   knowledge necessary to make your project a success. I enjoy
                   every step of the design process, from discussion and
