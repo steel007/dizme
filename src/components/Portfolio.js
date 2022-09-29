@@ -105,7 +105,7 @@ const Portfolio = () => {
                   className={`c-pointer  ${activeBtn("detail")}`}
                   onClick={handleFilterKeyChange("detail")}
                 >
-                  Detail
+                  SharePoint
                 </a>
               </li>
             </ul>
@@ -117,7 +117,7 @@ const Portfolio = () => {
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Mockup Shape"
+                    data-title="Rebuild"
                     data-category="Youtube"
                   >
                     <a
@@ -132,7 +132,7 @@ const Portfolio = () => {
                     </a>
                   </div>
                   <div className="mobile_title">
-                    <h3>Mockup Shape</h3>
+                    <h3>SharePoint</h3>
                     <span>Youtube</span>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const Portfolio = () => {
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Ave Bottle"
+                    data-title="Rebuild"
                     data-category="Vimeo"
                   >
                     <a
@@ -156,7 +156,7 @@ const Portfolio = () => {
                     </a>
                   </div>
                   <div className="mobile_title">
-                    <h3>Ave Bottle</h3>
+                    <h3>Rebuild</h3>
                     <span>Vimeo</span>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ const Portfolio = () => {
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Scott Felix"
+                    data-title="Spencer Teel"
                     data-category="Popup"
                   >
                     <a className="zoom" href="img/portfolio/5.jpg">
@@ -210,7 +210,7 @@ const Portfolio = () => {
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Art Stone"
+                    data-title="Rebuild"
                     data-category="Popup"
                   >
                     <a className="zoom" href="img/portfolio/4.jpg">
@@ -222,7 +222,7 @@ const Portfolio = () => {
                     </a>
                   </div>
                   <div className="mobile_title">
-                    <h3>Art Stone</h3>
+                    <h3>Rebuild</h3>
                     <span>Popup</span>
                   </div>
                 </div>
@@ -232,7 +232,7 @@ const Portfolio = () => {
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Global Evolution"
+                    data-title="SharePoint"
                     data-category="Detail"
                   >
                     <a className="portfolio_popup" href="#">
@@ -244,7 +244,7 @@ const Portfolio = () => {
                     </a>
                   </div>
                   <div className="mobile_title">
-                    <h3>Global Evolution</h3>
+                    <h3>SharePoint</h3>
                     <span>Detail</span>
                   </div>
                 </div>
