@@ -13,7 +13,7 @@ const Contact = () => {
             <span>Contact Me</span>
             <h3>I Want To Hear From You</h3>
             <p>
-              Please click the email button to contact me.
+              Please click the "Send Email" button below to contact me.
             </p>
              <p>
               You can call between 8:00 a.m. and 5:00 p.m. CST, Monday through Friday
