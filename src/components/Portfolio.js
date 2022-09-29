@@ -54,8 +54,8 @@ const Portfolio = () => {
             <span>Portfolio</span>
             <h3>My Amazing Works</h3>
             <p>
-              Most common methods for designing websites that work well on
-              desktop is responsive and adaptive design
+              I deploy Responsive and adaptive design websites that work well on
+              desktop, tablets, and mobile
             </p>
           </div>
           <div className="portfolio_filter">
