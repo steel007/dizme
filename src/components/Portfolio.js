@@ -55,7 +55,7 @@ const Portfolio = () => {
             <h3>My Amazing Works</h3>
             <p>
               I deploy Responsive and adaptive design websites that work well on
-              desktop, tablets, and mobile
+              desktop, tablets, and mobile.
             </p>
           </div>
           <div className="portfolio_filter">
