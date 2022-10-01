@@ -117,7 +117,7 @@ const Portfolio = () => {
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Rebuild"
+                    data-title="SharePoint"
                     data-category="Youtube"
                   >
                     <a
@@ -189,7 +189,7 @@ const Portfolio = () => {
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Spencer Teel"
+                    data-title="Blue Lemon"
                     data-category="Popup"
                   >
                     <a className="zoom" href="img/portfolio/5.jpg">
