@@ -4,7 +4,7 @@ const Contact = () => {
   const [data, setData] = useState({});
   useEffect(async () => {
     setData(await fatchData("/static/info.json"));
-  }, []);
+  });
   return (
     <div className="dizme_tm_section" id="contact">
       <div className="dizme_tm_contact">
